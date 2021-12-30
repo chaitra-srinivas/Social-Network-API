@@ -33,4 +33,36 @@ module.exports = {
         return res.status(500).json(err);
       });
   },
+
+  // Update a user
+
+  updateUser(req, res) {
+    User.findByIdAndUpdate(
+      { _id: req.params.userId },
+      { $set: req.body },
+      { runValidators: true, new: true }
+    )
+      .then((user) =>
+        !user
+          ? res.status(404).json({ message: "No such user exists!" })
+          : res.json(user)
+      )
+      .catch((err) => res.status(500).json(err));
+  },
+
+  // Delete a user and associated thoughts
+
+  deleteUser(req, res) {
+    User.findOneAndRemove({ _id: req.params.userId })
+      .then((user) =>
+        !user
+          ? res.status(404).json({ message: "No such user exists" })
+          : Thought.deleteMany({
+              _id: { $in: user.thoughts },
+            }).then(() =>
+              res.json({ message: "User and associated thoughts deleted!" })
+            )
+      )
+      .catch((err) => res.status(500).json(err));
+  },
 };
