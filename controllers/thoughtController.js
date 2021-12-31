@@ -69,4 +69,19 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
+
+
+  // Create a new reaction for a thought
+  // /api/thoughts/:thoughtId/reactions
+
+  createReaction(){},
+
+  // Delete reaction from a thought
+// api/thoughts/:thoughtId/reactions/reactionId
+
+
+deleteReaction(){}
+
+
+
 };
