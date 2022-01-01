@@ -93,7 +93,6 @@ module.exports = {
   // api/thoughts/:thoughtId/reactions/reactionId
 
   deleteReaction(req, res) {
-      console.log( "ThoughtId: " + req.params.thoughtId + " reactionId: " + req.params.reactionId);
     Thought.findOneAndUpdate(
         
       { _id: req.params.thoughtId },
