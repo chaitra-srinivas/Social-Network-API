@@ -52,13 +52,11 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
   ## Screenshots
 
-  ![Home page](/public/assets/homepage.png)
+  ![Users](/assets/Users.png)
 
-  ![Login page](/public/assets/loginpage.png)
-  
-  ![Dashboard](/public/assets/dashboard.png)
+  ![Thoughts](/assets/Thoughts.png)
  
-  ## Walkthrough video
+  ## [Walkthrough video](https://drive.google.com/file/d/1hoxa2f2BH0lcEajkGP88Q7QhkQ8WqXPH/view?usp=sharing)
 
   ## Questions
 
