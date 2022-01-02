@@ -4,16 +4,16 @@
    "description": "Mongoose back-end project",
    "main": "index.js",
    "license": "MIT",
-
    "scripts": {
       "start": "node index",
       "dev": "nodemon index",
       "seed": "node utils/seed",
       "heroku-postbuild": "node utils/seed.js"
-    },
+   },
    "dependencies": {
       "express": "^4.17.2",
       "jest": "^27.4.5",
+      "moment": "^2.29.1",
       "mongoose": "^6.1.3"
    },
    "devDependencies": {

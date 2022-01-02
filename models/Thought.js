@@ -1,10 +1,11 @@
-const { Schema, model } = require("mongoose");
+const { Schema, Types, model } = require("mongoose");
 const Reaction = require("./Reaction");
+const moment = require("moment");
 
 const thoughtSchema = new Schema(
   {
     thoughtText: {
-      type: String,
+      type: Schema.Types.String,
       required: true,
       minlength: 1,
       maxlength: 280,
@@ -12,9 +13,11 @@ const thoughtSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
+      get: (createdAtVal) =>
+        moment(createdAtVal).format("MMM DD, YYYY [at] hh:mm a"),
     },
     username: {
-      type: String,
+      type: Schema.Types.String,
       required: true,
     },
     reactions: [Reaction],
@@ -22,6 +25,7 @@ const thoughtSchema = new Schema(
   {
     toJSON: {
       virtuals: true,
+      getters: true
     },
     id: false,
   }
