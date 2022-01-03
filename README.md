@@ -56,7 +56,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
   ![Thoughts](/assets/Thoughts.png)
  
-  ## [Walkthrough video](https://drive.google.com/file/d/1hoxa2f2BH0lcEajkGP88Q7QhkQ8WqXPH/view?usp=sharing)
+  ## [Walkthrough video](https://drive.google.com/file/d/1ESPqpB-iGMPN2z9u-k6TfZoSw6peb2-m/view?usp=sharing)
 
   ## Questions
 
